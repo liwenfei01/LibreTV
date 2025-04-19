@@ -84,6 +84,8 @@ services:
     restart: unless-stopped
 ```
 
+**注意：Docker 部署后需要开启 https，否则 crypto.subtle.digest 方法无法使用，Web Crypto API 在非安全上下文中是受限的（如果你设置了密码，你将无法验证密码）。所以，最好是套个域名。**
+
 ### 本地开发环境
 
 项目包含后端代理功能，需要支持服务器端功能的环境：
